@@ -1,0 +1,34 @@
+<div class="listarGeneral">
+    <h1><?php echo $this->title;?></h1>
+    <div class="divNuevo"><a href="<?php echo $this->url(array('controller'=>'prendas','action'=>'nuevo')) ?>">Nuevo</a></div>
+    <table class="tableLista">
+        <tr>
+            <td class="tdTableTitle">Nº</td>
+            <td class="tdTableTitle">Nombre</td>
+            <td class="tdTableTitle">Metraje</td>
+            <td class="tdTableTitle">Editar</td>
+            <td class="tdTableTitle">Eliminar</td>
+            <td class="tdTableTitle">Ver</td>
+        </tr>
+        <?php if(count($this->lista)) {?>
+            <?php $cont=1; ?>
+            <?php foreach ($this->lista as $lista): ?>
+        <tr>
+            <td class="tdTable"><?php echo $cont; ?></td>
+            <td class="tdTable"><?php echo $lista->pr_nombre; ?></td>
+            <td class="tdTable"><?php echo $lista->pr_metraje; ?></td>
+            <td class="tdTableImg"><a href="<?php echo $this->url(array('controller'=>'prendas','action'=>'editar','id'=>$lista->pr_id)) ?>"><img src="<?php echo $this->baseUrl() ?>/images/icon-editar.png"></img></a></td>
+            <td class="tdTableImg"><a href="<?php echo $this->url(array('controller'=>'prendas','action'=>'eliminar','id'=>$lista->pr_id)) ?>"><img src="<?php echo $this->baseUrl() ?>/images/icon-eliminar.png"></img></a></td>
+            <td class="tdTableImg"><a href="<?php echo $this->url(array('controller'=>'prendas','action'=>'ver','id'=>$lista->pr_id)) ?>"><img src="<?php echo $this->baseUrl() ?>/images/icon-ver.png"></img></a></td>
+        </tr>      
+         <?php   
+         $cont++;
+         endforeach;
+        ?>
+        <?php } else { ?>
+        <tr>
+            <td colspan="7">No se encontraron registros</td>
+        </tr>   
+     <?php   }?>
+    </table>
+</div>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configdata>
+    <nav>
+        <customer>
+            <label>Clientes</label>
+            <module>admin</module>
+	    <controller>customer</controller>
+	    <action>index</action>
+            <resource>admin:customer</resource>
+            <privilege>index</privilege>
+        </customer>
+        <user>
+            <label>Usuarios</label>
+            <module>admin</module>
+	    <controller>user</controller>
+	    <action>index</action>
+            <resource>admin:user</resource>
+              <privilege>index</privilege>
+        </user>
+        <catalog>
+            <label>Catalogo</label>
+            <module>admin</module>
+	    <controller>catalog</controller>
+	    <action>index</action>
+            <resource>admin:catalog</resource>
+              <privilege>index</privilege>
+        </catalog>
+        <other>
+            <label>Otros</label>
+            <module>member</module>
+	    <controller>index</controller>
+	    <action>index</action>
+            <resource>member:index</resource>
+              <privilege>index</privilege>
+        </other>
+        
+        </nav>
+</configdata>
+

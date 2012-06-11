@@ -1,0 +1,342 @@
+/* 
+    Document   : estilos
+    Created on : 08/06/2012, 11:31:51 AM
+    Author     : ddelacruz
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+@font-face
+{
+ font-family: 'ubuntu';
+ src: url('../images/Ubuntu-R.ttf');
+ src: url('../images/Ubuntu-R.eot');
+ src: local('ubuntu'), url('../images/Ubuntu-R.ttf');
+}
+
+body{
+    background: #075680;/*2E5E79; */
+    color: white;
+    font-family: ubuntu;
+    font-size: 16px;
+    text-shadow: 1px 1px 0 rgba(0,0,0,.3);
+}
+
+header{
+    background: #043351;
+    border-radius:6px;
+    height: 80px;
+    margin-top: 30px;
+}
+
+nav{
+    border-bottom: 1px solid #043351;
+}
+
+nav ul{
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a{
+    color: white;
+    
+}
+
+nav ul li{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display: inline-block;
+    font-size: 14px;
+    padding: 7px;
+    height: 33px;
+    text-align: center;
+    vertical-align: middle;
+    width: 10%;
+}
+
+#formLogin{    
+    background: url('../images/login-box.png') no-repeat;
+    color: white;
+    margin: 100px auto;
+    height: 352px;    
+    padding: 58px 76px 0;
+    width: 333px;
+}
+
+.btnLogin{
+    background: url('../images/login-btn.png') no-repeat;
+    border: 0;
+    height: 42px;
+    padding: 10px 45px;
+    width: 103px;
+}
+.botonLogin{
+    text-align: center;
+}
+.btnLogin:hover{
+    background: url('../images/login-btn.png') no-repeat;
+    height: 42px;
+    padding: 10px 32px;
+    width: 103px;
+}
+
+.divLogin{
+    display: inline;
+    float: left;
+    margin: 0 0 7px;
+    width: 230px;
+}
+
+.divNuevo{
+    color: #1e4f8a;
+    height: 26px;
+    padding: 5px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.divNuevo a{
+    background: url('../images/icon-nuevo.png') no-repeat;
+    color: #1B548D;
+    height: 30px;
+    margin: 5px;
+    padding: 3px 0 3px 30px;
+    text-shadow: 0px 0px 0 rgba(0,0,0,1);
+    vertical-align:  middle;
+}
+.headerLeft h1{
+    color: white;
+    font-family: ubuntu;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.headerRight{
+    color: white;
+    text-align: right;
+    padding-right: 40px;
+}
+.headerRightImg{
+    float: left;
+    text-align: right;
+}
+.headerRightText ul{
+    margin: 0;
+    padding: 28px;
+}
+
+.headerRightText ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 2px;
+}
+.inputLogin  {
+	width: 205px;
+	padding: 10px 4px 6px 3px;
+	border: 1px solid #0d2c52;
+	background-color:#1e4f8a;
+	font-size: 16px;
+	color: #ebebeb;
+}
+.labelLogin{
+    color: white;
+    display: inline;
+    float: left;
+    margin: 0 0 7px;
+    padding: 10px 10px 0 0;
+    text-align: right;
+    width: 80px;
+}
+.liCotizar{
+    background-image: url('../images/icon-cotizar.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat ;
+    padding-left: 24px;
+    width: 100px;
+}
+.liCotizar:hover{
+    background: rgba(0,0,0,.3) url('../images/icon-cotizar.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat ;
+    padding-left: 24px;
+}
+.liCotizar a:hover{
+    color: white;
+    text-decoration: none;
+}
+.liControles{
+    background-image: url('../images/icon-controles.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat ;
+    padding-left: 24px;
+    width: 110px;
+}
+.liControles:hover{
+    background: rgba(0,0,0,.3) url('../images/icon-controles.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat ;
+    padding-left: 24px;
+}
+.liControles a:hover{
+    color: white;
+    text-decoration: none;
+}
+.liClientes{
+    background-image: url('../images/icon-clientes.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat ;
+    padding-left: 24px;
+    width: 110px;
+}
+.liClientes:hover{
+    background: rgba(0,0,0,.3) url('../images/icon-clientes.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat ;
+    padding-left: 24px;
+}
+.liClientes a:hover{
+    color: white;
+    text-decoration: none;
+}
+.liPrendas{
+    background-image: url('../images/icon-prendas.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat ;
+    margin-left: 10px;
+    padding-left: 24px;
+    width: 100px;
+}
+.liPrendas:hover{
+    background: rgba(0,0,0,.3) url('../images/icon-prendas.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat ;
+    padding-left: 24px;
+}
+.liPrendas a:hover{
+    color: white;
+    text-decoration: none;
+}
+.liTelas{
+    background-image: url('../images/icon-telas.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat ;
+    margin-left: 10px;
+    padding-left: 24px;
+    width: 80px;
+}
+.liTelas:hover{
+    background: rgba(0,0,0,.3) url('../images/icon-telas.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat ;
+    padding-left: 24px;
+}
+.liTelas a:hover{
+    color: white;
+    text-decoration: none;
+}
+.liUsuarios{
+    background-image: url('../images/icon-usuario.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat ;
+    margin-left: 10px;
+    padding-left: 24px;
+    width: 80px;
+}
+.liUsuarios:hover{
+    background: rgba(0,0,0,.3) url('../images/icon-usuario.png');
+    background-position: 0 50%;
+    background-repeat: no-repeat ;
+    padding-left: 24px;
+}
+.liUsuarios a:hover{
+    color: white;
+    text-decoration: none;
+}
+.listarGeneral h1{
+    background: #E6F0F3;
+    border-top-left-radius: 6px ;
+    border-top-right-radius: 6px ;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0px ;
+    border-bottom-color: #B3CBD6;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: #1B548D;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 3px 0 3px 30px;
+    text-shadow: 0px 0px 0 rgba(0,0,0,1);
+}
+
+.nuevoGeneral h1{
+    background: #E6F0F3;
+    border-top-left-radius: 6px ;
+    border-top-right-radius: 6px ;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0px ;
+    border-bottom-color: #B3CBD6;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: #1B548D;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 3px 0 3px 30px;
+    text-shadow: 0px 0px 0 rgba(0,0,0,1);
+}
+.siderbarCenter{
+    background: white;
+    border-radius:5px;
+    margin: 30px 0;
+    padding-bottom: 30px;
+}
+.siderbarLeft{
+    border-radius:5px;
+    background: #d1dee4;
+    height: 500px;
+    margin-top: 5px;
+    padding: 10px 0;
+}
+.tableLista{
+    width: 100%;
+}
+.tableNuevo{
+    width: 50%;
+}
+.tdTable{
+    background: #FFF;
+    border-bottom: #e9eaea 1px solid;
+    color: #000;
+    font-size: 13px;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0px 0px 0 rgba(0,0,0,1);
+}
+.tdTableNuevo{
+    background: #FFF;
+    color: #000;
+    font-size: 13px;
+    padding: 6px 10px;
+    text-align: left;
+    text-decoration: none;
+    text-shadow: 0px 0px 0 rgba(0,0,0,1);
+}
+.tdTableImg{
+    border-bottom: #e9eaea 1px solid;
+    text-align: center;
+}
+.tdTableTitle{
+    background: #8F8F8F;
+    color: white;
+    font-size: 14px;
+    padding: 8px 10px;
+    text-align: center;
+}

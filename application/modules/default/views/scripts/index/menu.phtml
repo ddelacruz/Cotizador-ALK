@@ -1,0 +1,12 @@
+<ul>
+<?php foreach($this->menu as $menu):
+?>
+		<li><a href="<?php echo $this->url(
+                        array(
+                            "action"=>"menu",
+                            "controller"=>"index"
+                                            ))?>" ><?php echo $menu['nombre'];?></a></li>
+
+<?php  endforeach;?>
+</ul>
+
