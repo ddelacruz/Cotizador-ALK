@@ -67,10 +67,24 @@ class PrendasController extends Zend_Controller_Action
         }
         
         $this->_redirect('prendas');
-    }           
+    }
+
+    public function verAction()
+    {
+       $id = $this->_getParam('id');
+        
+        $tela = new Default_Model_TbPrendas();
+        $row = $tela->getRowPrenda($id);
+       
+        $this->view->row = $row;
+        $this->view->title = $row->pr_nombre;
+        $this->view->foto = $row->pr_foto;
+    }
 
 
 }
+
+
 
 
 

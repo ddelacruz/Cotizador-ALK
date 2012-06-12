@@ -72,7 +72,12 @@ class TelasController extends Zend_Controller_Action
 
     public function verAction()
     {
-        // action body
+        $id = $this->_getParam('id');
+        
+        $tela = new Default_Model_TbTelas();
+        $row = $tela->getRowTela($id);
+        $this->view->row = $row;
+        $this->view->title = $row->te_nombre;
     }
 
 

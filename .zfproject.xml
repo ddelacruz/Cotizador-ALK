@@ -52,6 +52,7 @@
               <actionMethod actionName="nuevo"/>
               <actionMethod actionName="editar"/>
               <actionMethod actionName="eliminar"/>
+              <actionMethod actionName="ver"/>
             </controllerFile>
           </controllersDirectory>
           <formsDirectory enabled="false">
@@ -112,6 +113,9 @@
               </viewControllerScriptsDirectory>
               <viewControllerScriptsDirectory forControllerName="Prendas">
                 <viewScriptFile forActionName="eliminar"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Prendas">
+                <viewScriptFile forActionName="ver"/>
               </viewControllerScriptsDirectory>
             </viewScriptsDirectory>
             <viewHelpersDirectory/>

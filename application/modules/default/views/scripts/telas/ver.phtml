@@ -1,4 +1,8 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Telas</b> and script/action name <b>ver</b></p>
-</div>
+<h1><?php echo $this->title; ?></h1>
+<?php if(count($this->row)){ 
+     foreach ($this->row as $row): ?>
+         <img src="<?php echo $this_>baseUrl() ?>/images/prendas/"><?php echo $row->te_foto; ?></img>
+ <?php    endforeach;
+    ?>
+
+<?php } ?>

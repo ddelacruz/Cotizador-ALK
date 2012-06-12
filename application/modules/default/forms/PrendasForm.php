@@ -43,7 +43,8 @@ class Default_Form_PrendasForm extends Zend_Form
             $this->addElement('file','pr_foto',array(                
                  'class'    =>'span9'                
             ));
-            $this->getElement('pr_foto')->removeDecorator('HtmlTag');
+            $this->getElement('pr_foto')->setDestination('images/prendas');
+            
          $this->addElement('submit','guardar',array(
              'decorators' => $this->elementDecorators1,
              'class'    =>'btn primary',

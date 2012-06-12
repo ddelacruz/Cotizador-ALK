@@ -146,6 +146,17 @@ nav ul li{
 	font-size: 16px;
 	color: #ebebeb;
 }
+
+.imgVer {
+    
+    text-align: center;
+}
+.imgVer img{
+    border-radius: 6px;
+    box-shadow: #ccc 0 0 5px 5px;
+    margin: 10px;
+    
+}
 .labelLogin{
     color: white;
     display: inline;
@@ -339,4 +350,8 @@ nav ul li{
     font-size: 14px;
     padding: 8px 10px;
     text-align: center;
+}
+.verGeneral{
+    
+    margin: 0 25%;
 }
