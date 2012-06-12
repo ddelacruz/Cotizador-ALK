@@ -1,3 +1,6 @@
+<script type="text/javascript">
+$('#myModal').modal(options)
+</script>
 <div class="listarGeneral">
     <h1><?php echo $this->title;?></h1>
     <div class="divNuevo"><a href="<?php echo $this->url(array('controller'=>'prendas','action'=>'nuevo')) ?>">Nuevo</a></div>
@@ -17,10 +20,23 @@
             <td class="tdTable"><?php echo $cont; ?></td>
             <td class="tdTable"><?php echo $lista->pr_nombre; ?></td>
             <td class="tdTable"><?php echo $lista->pr_metraje; ?></td>
-            <td class="tdTableImg"><a href="<?php echo $this->url(array('controller'=>'prendas','action'=>'editar','id'=>$lista->pr_id)) ?>"><img src="<?php echo $this->baseUrl() ?>/images/icon-editar.png"></img></a></td>
-            <td class="tdTableImg"><a href="<?php echo $this->url(array('controller'=>'prendas','action'=>'eliminar','id'=>$lista->pr_id)) ?>"><img src="<?php echo $this->baseUrl() ?>/images/icon-eliminar.png"></img></a></td>
+            <td class="tdTableImg"><a href="<?php echo $this->url(array('controller'=>'prendas','action'=>'editar','id'=>$lista->pr_id)) ?>" ><img src="<?php echo $this->baseUrl() ?>/images/icon-editar.png"></img></a></td>
+            <td class="tdTableImg"><a data-toggle="modal" href="#myModal"><img src="<?php echo $this->baseUrl() ?>/images/icon-eliminar.png"></img></a></td>
             <td class="tdTableImg"><a href="<?php echo $this->url(array('controller'=>'prendas','action'=>'ver','id'=>$lista->pr_id)) ?>"><img src="<?php echo $this->baseUrl() ?>/images/icon-ver.png"></img></a></td>
-        </tr>      
+        </tr>
+        <tr>
+            <td colspan="7">
+                <div class="modal hide" id="myModal">            
+                    <div class="modal-body">
+                       <h1>Desea eliminar la Prenda</h1>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn" data-dismiss="modal">No</a>
+                        <a href="<?php echo $this->url(array('module'=>'default', 'controller'=>'prendas', 'action'=>'eliminar','id'=>$lista->pr_id)) ?>" class="btn btn-primary">Si</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
          <?php   
          $cont++;
          endforeach;
@@ -32,3 +48,4 @@
      <?php   }?>
     </table>
 </div>
+ 

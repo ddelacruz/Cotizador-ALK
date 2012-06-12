@@ -13,6 +13,10 @@ class PrendasController extends Zend_Controller_Action
         $this->view->title = 'Lista de Prendas';
         $prenda = new Default_Model_TbPrendas();
         $this->view->lista = $prenda->listarPrendas();
+        $form = new Default_Form_PrendasForm();
+        $this->view->form = $form;
+        $this->view->titleModal = 'Nueva Prenda';
+
     }
 
     public function nuevoAction()
@@ -53,8 +57,22 @@ class PrendasController extends Zend_Controller_Action
         }
     }
 
+    public function eliminarAction()
+    {
+        $id = $this->_getParam('id');
+        $prenda = new Default_Model_TbPrendas(); 
+        $row = $prenda->getRowPrenda($id);
+        if($row){
+             $row->delete();
+        }
+        
+        $this->_redirect('prendas');
+    }           
+
 
 }
+
+
 
 
 

@@ -60,7 +60,14 @@ class TelasController extends Zend_Controller_Action
 
     public function eliminarAction()
     {
-        // action body
+        $id = $this->_getParam('id');
+        
+        $tela = new Default_Model_TbTelas();
+        $row = $tela->getRowTela($id);
+        if($row){
+            $row->delete();
+        }
+        $this->_redirect('/telas');
     }
 
     public function verAction()

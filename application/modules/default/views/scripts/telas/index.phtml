@@ -1,3 +1,6 @@
+<script type="text/javascript">
+$('#myModal').modal(options)
+</script>
 <div class="listarGeneral">
     <h1><?php echo $this->title;?></h1>
     <div class="divNuevo"><a href="<?php echo $this->url(array('controller'=>'telas','action'=>'nuevo')) ?>">Nuevo</a></div>
@@ -20,9 +23,22 @@
             <td class="tdTable"><?php echo $lista->te_descripcion; ?></td>
             <td class="tdTable"><?php echo $lista->te_precio; ?></td>
             <td class="tdTableImg"><a href="<?php echo $this->url(array('controller'=>'telas','action'=>'editar','id'=>$lista->te_id)) ?>"><img src="<?php echo $this->baseUrl() ?>/images/icon-editar.png"></img></a></td>
-            <td class="tdTableImg"><a href="<?php echo $this->url(array('controller'=>'telas','action'=>'eliminar','id'=>$lista->te_id)) ?>"><img src="<?php echo $this->baseUrl() ?>/images/icon-eliminar.png"></img></a></td>
+            <td class="tdTableImg"><a data-toggle="modal" href="#myModal"><img src="<?php echo $this->baseUrl() ?>/images/icon-eliminar.png"></img></a></td>
             <td class="tdTableImg"><a href="<?php echo $this->url(array('controller'=>'telas','action'=>'ver','id'=>$lista->te_id)) ?>"><img src="<?php echo $this->baseUrl() ?>/images/icon-ver.png"></img></a></td>
-        </tr>      
+        </tr> 
+        <tr>
+            <td colspan="7">
+                <div class="<?php echo 'modal hide '; echo $cont; ?>" id="myModal">            
+                    <div class="modal-body">
+                       <h1>Desea eliminar la tela ?</h1>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn" data-dismiss="modal">No</a>
+                        <a href="<?php echo $this->url(array('module'=>'default', 'controller'=>'telas', 'action'=>'eliminar','id'=>$lista->te_id)) ?>" class="btn btn-primary">Si</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
          <?php   
          $cont++;
          endforeach;
