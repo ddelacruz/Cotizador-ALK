@@ -30,6 +30,10 @@
             </controllerFile>
             <controllerFile controllerName="Clientes">
               <actionMethod actionName="index"/>
+              <actionMethod actionName="nuevo"/>
+              <actionMethod actionName="editar"/>
+              <actionMethod actionName="eliminar"/>
+              <actionMethod actionName="ver"/>
             </controllerFile>
             <controllerFile controllerName="Telas">
               <actionMethod actionName="index"/>
@@ -58,11 +62,13 @@
           <formsDirectory enabled="false">
             <formFile formName="TelasForm"/>
             <formFile formName="PrendasForm"/>
+            <formFile formName="ClientesForm"/>
           </formsDirectory>
           <layoutsDirectory enabled="false"/>
           <modelsDirectory>
             <modelFile modelName="TbTelas"/>
             <modelFile modelName="TbPrendas"/>
+            <modelFile modelName="TbClientes"/>
           </modelsDirectory>
           <viewsDirectory>
             <viewScriptsDirectory>
@@ -115,6 +121,18 @@
                 <viewScriptFile forActionName="eliminar"/>
               </viewControllerScriptsDirectory>
               <viewControllerScriptsDirectory forControllerName="Prendas">
+                <viewScriptFile forActionName="ver"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Clientes">
+                <viewScriptFile forActionName="nuevo"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Clientes">
+                <viewScriptFile forActionName="editar"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Clientes">
+                <viewScriptFile forActionName="eliminar"/>
+              </viewControllerScriptsDirectory>
+              <viewControllerScriptsDirectory forControllerName="Clientes">
                 <viewScriptFile forActionName="ver"/>
               </viewControllerScriptsDirectory>
             </viewScriptsDirectory>

@@ -1,4 +1,55 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Clientes</b> and script/action name <b>index</b></p>
+<script type="text/javascript">
+$('#myModal').modal(options)
+</script>
+<div class="listarGeneral">
+    <h1><?php echo $this->title;?></h1>
+    <div class="divNuevo"><a href="<?php echo $this->url(array('controller'=>'clientes','action'=>'nuevo')) ?>">Nuevo</a></div>
+    <table class="tableLista">
+        <tr>
+            <td class="tdTableTitle">Nº</td>
+            <td class="tdTableTitle">RUC</td>
+            <td class="tdTableTitle">Razón Social</td>
+            <td class="tdTableTitle">Contacto</td>
+            <td class="tdTableTitle">Email</td>
+            <td class="tdTableTitle">Editar</td>
+            <td class="tdTableTitle">Eliminar</td>
+            <td class="tdTableTitle">Ver</td>
+        </tr>
+        <?php if(count($this->lista)) {?>
+            <?php $cont=1; ?>
+            <?php foreach ($this->lista as $lista): ?>
+        <tr>
+            <td class="tdTable"><?php echo $cont; ?></td>
+            <td class="tdTable"><?php echo $lista->cl_ruc; ?></td>
+            <td class="tdTable"><?php echo $lista->cl_razon_social; ?></td>
+            <td class="tdTable"><?php echo $lista->cl_contacto; ?></td>
+            <td class="tdTable"><?php echo $lista->cl_email; ?></td>
+            <td class="tdTableImg"><a href="<?php echo $this->url(array('controller'=>'clientes','action'=>'editar','id'=>$lista->cl_id)) ?>" ><img src="<?php echo $this->baseUrl() ?>/images/icon-editar.png"></img></a></td>
+            <td class="tdTableImg"><a data-toggle="modal" href="#myModal"><img src="<?php echo $this->baseUrl() ?>/images/icon-eliminar.png"></img></a></td>
+            <td class="tdTableImg"><a href="<?php echo $this->url(array('controller'=>'clientes','action'=>'ver','id'=>$lista->cl_id)) ?>"><img src="<?php echo $this->baseUrl() ?>/images/icon-ver.png"></img></a></td>
+        </tr>
+        <tr>
+            <td colspan="8">
+                <div class="modal hide" id="myModal">            
+                    <div class="modal-body">
+                       <h1>Desea eliminar el Cliente ?</h1>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn" data-dismiss="modal">No</a>
+                        <a href="<?php echo $this->url(array('module'=>'default', 'controller'=>'clientes', 'action'=>'eliminar','id'=>$lista->cl_id)) ?>" class="btn btn-primary">Si</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+         <?php   
+         $cont++;
+         endforeach;
+        ?>
+        <?php } else { ?>
+        <tr>
+            <td colspan="8">No se encontraron registros</td>
+        </tr>   
+     <?php   }?>
+    </table>
 </div>
+ 
